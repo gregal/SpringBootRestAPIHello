@@ -18,3 +18,12 @@ Endpoints:
 - POST / artigos
 - PUT /artigos/{id}
 - DELETE /artigos/{id}
+
+Use a coleção do Postman inclusa nete repositório para testar:
+
+![GitHub Logo](/docs/Postman%20GET%20all.png)
+
+# Download
+
+Repositório disponível em:
+https://github.com/gregal/SpringBootRestAPIHello
