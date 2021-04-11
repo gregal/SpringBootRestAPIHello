@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.Api;
+
+@Api(value = "API de acesso à base de artigos científicos", description = "REST APIs related to Artigo Entity")
 @RestController
 class ControleRestArtigos
 {
@@ -73,7 +76,8 @@ class ControleRestArtigos
 	}
 	
 	@PutMapping("/artigos/{id}")
-	Artigo alterarArtigo(@RequestBody Artigo novoArtigo, @PathVariable Long id) {
+	Artigo alterarArtigo(@RequestBody Artigo novoArtigo, @PathVariable Long id)
+	{
 	
 		log.info("PUT /artigos");
 		log.info(novoArtigo.toString());
@@ -93,6 +97,6 @@ class ControleRestArtigos
     			novoArtigo.setId(id);
     			return this.repositorio.save(novoArtigo);
     		});
-	  }
+	}
 	
 }
